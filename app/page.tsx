@@ -6,6 +6,18 @@ import { VariantPanel } from "@/components/VariantPanel";
 import { ResultsList } from "@/components/ResultsList";
 import type { Assembly } from "@/lib/hgvs/types";
 
+interface VariantString { text: string; label: string }
+
+interface TranscriptGroup {
+  gene?: string;
+  transcript?: string;
+  proteinAccession?: string;
+  hgvsc?: string;
+  hgvsp?: string;
+  consequenceTerms?: string[];
+  variants: VariantString[];
+}
+
 interface ExpandResponse {
   input: string;
   assembly: Assembly;
@@ -17,7 +29,12 @@ interface ExpandResponse {
     notes: string[];
     consequences: { gene?: string; hgvsc?: string; hgvsp?: string; proteinShort?: string; proteinLong?: string }[];
   };
-  variants: { text: string; label: string }[];
+  groups: {
+    universal: VariantString[];
+    perTranscript: TranscriptGroup[];
+    fallback: VariantString[];
+  };
+  variants: VariantString[];
 }
 
 interface PubmedResponse {

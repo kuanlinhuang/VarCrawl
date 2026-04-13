@@ -103,6 +103,48 @@ h1 {
   letter-spacing: 0.05em;
 }
 
+.group-block {
+  padding: 12px 0;
+  border-bottom: 1px dashed var(--border);
+}
+.group-block:last-child { border-bottom: 0; }
+
+.group-header {
+  margin-bottom: 8px;
+}
+.group-title {
+  font-weight: 600;
+  font-size: 14px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  color: var(--text);
+}
+.group-sub {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  margin-top: 4px;
+  font-size: 12px;
+}
+.consequence-pill {
+  background: rgba(91, 224, 200, 0.15);
+  color: var(--accent-2);
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-size: 11px;
+}
+.hgvs-inline {
+  color: var(--muted);
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+.muted-small {
+  color: var(--muted);
+  font-size: 12px;
+}
+
 .variant-list {
   display: flex;
   flex-wrap: wrap;

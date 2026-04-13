@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { classify } from "@/lib/hgvs/classify";
 import { canonicalize } from "@/lib/hgvs/convert";
-import { enumerateVariantStrings } from "@/lib/hgvs/enumerate";
+import { enumerateGrouped, flattenVariants } from "@/lib/hgvs/enumerate";
 import { Assembly } from "@/lib/hgvs/types";
 import { cacheGet, cacheSet, hash } from "@/lib/cache";
 
@@ -50,13 +50,15 @@ export async function POST(req: NextRequest) {
   }
 
   const canonical = await canonicalize(classified, assembly);
-  const variants = enumerateVariantStrings(canonical);
+  const groups = enumerateGrouped(canonical);
+  const variants = flattenVariants(groups);
 
   const resp = {
     input: body.query,
     assembly,
     classified,
     canonical,
+    groups,
     variants,
   };
   await cacheSet(cacheKey, resp);
