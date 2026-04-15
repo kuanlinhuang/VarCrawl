@@ -13,7 +13,7 @@ import { AA1_TO_3, AA3_TO_1, Assembly, CanonicalVariant, ClassifiedInput, Conseq
  * useful.
  */
 
-const USER_AGENT = "AskMutation/0.1 (https://github.com/huang-lab/askmutation)";
+const USER_AGENT = "VarCrawl/0.1 (https://precisionomics.org)";
 
 function vepBase(assembly: Assembly): string {
   if (assembly === "GRCh37") return "https://grch37.rest.ensembl.org";

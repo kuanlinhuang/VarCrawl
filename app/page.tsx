@@ -230,10 +230,16 @@ export default function Page() {
 
   return (
     <main>
-      <h1>AskMutation</h1>
+      <h1>VarCrawl</h1>
       <p className="subtitle">
-        Paste a mutation in any HGVS-like notation. We expand it into every way it might
-        appear in the literature and search PubMed and ClinVar for each.
+        Paste a mutation in any HGVS-like notation. We expand it into every way and search PubMed and ClinVar for you.
+      </p>
+      <p className="subtitle" style={{ marginTop: -16 }}>
+        Powered by the Huang Lab at Mount Sinai (
+        <a href="https://precisionomics.org" target="_blank" rel="noopener noreferrer">
+          precisionomics.org
+        </a>
+        )
       </p>
 
       <SearchForm onSearch={handleSearch} disabled={loading !== "idle"} />

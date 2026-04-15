@@ -1,4 +1,6 @@
-# AskMutation
+# VarCrawl
+
+Powered by the Huang Lab at Mount Sinai (<https://precisionomics.org>). 
 
 A serverless web app for searching PubMed and ClinVar by mutation. Paste a
 mutation in any common notation (HGVSp, HGVSc, HGVSg, short forms like `V600E`,
@@ -26,9 +28,6 @@ so we compose it in place of self-hosting TransVar.
 ## Genome assemblies
 
 GRCh38 and GRCh37 are fully supported via the two Ensembl REST endpoints.
-T2T-CHM13v2.0 is accepted in the UI but Ensembl VEP REST does not currently
-serve CHM13; queries fall back to GRCh38 coordinates and the UI shows a
-"T2T lift-over unavailable" note.
 
 ## Getting started
 

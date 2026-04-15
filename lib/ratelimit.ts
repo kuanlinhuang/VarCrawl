@@ -30,7 +30,7 @@ const limiter = enabled
   ? new Ratelimit({
       redis: Redis.fromEnv(),
       limiter: Ratelimit.slidingWindow(max, windowStr),
-      prefix: "askmutation:rl",
+      prefix: "varcrawl:rl",
       analytics: false,
     })
   : null;

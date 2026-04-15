@@ -57,7 +57,7 @@ export async function POST(req: NextRequest) {
   const cfg = {
     apiKey: process.env.NCBI_API_KEY,
     email: process.env.NCBI_EMAIL,
-    tool: "askmutation",
+    tool: "varcrawl",
   };
 
   const all = await searchClinvarForVariants(variants, cfg);

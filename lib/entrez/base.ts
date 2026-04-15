@@ -12,7 +12,7 @@ export interface EntrezConfig {
 
 export function baseParams(cfg: EntrezConfig): URLSearchParams {
   const params = new URLSearchParams();
-  params.set("tool", cfg.tool ?? "askmutation");
+  params.set("tool", cfg.tool ?? "varcrawl");
   if (cfg.email) params.set("email", cfg.email);
   if (cfg.apiKey) params.set("api_key", cfg.apiKey);
   return params;
