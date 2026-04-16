@@ -1,6 +1,8 @@
 # VarCrawl
 
-Powered by the Huang Lab at Mount Sinai (<https://precisionomics.org>). 
+Powered by the Huang Lab at Mount Sinai (<https://labs.icahn.mssm.edu/kuanhuanglab/>).
+
+GitHub: <https://github.com/Huang-lab/VarCrawl>
 
 A serverless web app for searching PubMed and ClinVar by mutation. Paste a
 mutation in any common notation (HGVSp, HGVSc, HGVSg, short forms like `V600E`,

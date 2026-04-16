@@ -281,8 +281,12 @@ export default function Page() {
       </p>
       <p className="subtitle" style={{ marginTop: -16 }}>
         Powered by the Huang Lab at Mount Sinai (
-        <a href="https://precisionomics.org" target="_blank" rel="noopener noreferrer">
-          precisionomics.org
+        <a href="https://labs.icahn.mssm.edu/kuanhuanglab/" target="_blank" rel="noopener noreferrer">
+          labs.icahn.mssm.edu/kuanhuanglab
+        </a>
+        ) · GitHub (
+        <a href="https://github.com/Huang-lab/VarCrawl" target="_blank" rel="noopener noreferrer">
+          github.com/Huang-lab/VarCrawl
         </a>
         )
       </p>
